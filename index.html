@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제주도 2박 3일 커플 여행 플랜 | 6월 29일-7월 1일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-bg: #0a0a0a;
+            --secondary-bg: #111111;
+            --card-bg: #1a1a1a;
+            --accent-blue: #0080ff;
+            --accent-orange: #ff6b35;
+            --accent-green: #4ecdc4;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --text-muted: #888888;
+            --border-color: #333333;
+            --hover-bg: #222222;
+            --gradient-primary: linear-gradient(135deg, #0080ff 0%, #0066cc 100%);
+            --gradient-sunset: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+        }
+
+        body {
+            font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--primary-bg);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 14px;
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-blue);
+            background-color: var(--hover-bg);
+        }
+
+        /* Mobile menu */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-primary);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(0, 128, 255, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(255, 107, 53, 0.1) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero .accent {
+            background: var(--gradient-sunset);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .dates {
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--text-primary);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(0, 128, 255, 0.4);
+        }
+
+        /* Sections */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section:nth-child(even) {
+            background: var(--secondary-bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Day Cards */
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .day-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .day-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .day-header {
+            padding: 25px 30px;
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+        }
+
+        .day-header h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .day-header .date {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .day-content {
+            padding: 30px;
+        }
+
+        .activity {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: var(--hover-bg);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .activity:hover {
+            background: rgba(0, 128, 255, 0.1);
+        }
+
+        .activity-time {
+            background: var(--accent-blue);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-right: 20px;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .activity-details h4 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .activity-details p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .activity-icon {
+            font-size: 1.2rem;
+            margin-right: 8px;
+        }
+
+        /* Special Cards */
+        .restaurant-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .restaurant-card:hover {
+            border-color: var(--accent-orange);
+            background: rgba(255, 107, 53, 0.05);
+        }
+
+        .restaurant-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .restaurant-icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: var(--accent-orange);
+        }
+
+        .restaurant-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .restaurant-info {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Tips Section */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .tip-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-green);
+        }
+
+        .tip-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--accent-green);
+        }
+
+        .tip-card h4 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .tip-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Weather & Info */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .info-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--accent-blue);
+        }
+
+        .info-card h4 {
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .info-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 50px 0 30px;
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: rgba(10, 10, 10, 0.98);
+                flex-direction: column;
+                padding: 20px;
+                border-top: 1px solid var(--border-color);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .dates {
+                font-size: 1.2rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .days-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .activity {
+                flex-direction: column;
+                text-align: left;
+            }
+
+            .activity-time {
+                margin-bottom: 10px;
+                margin-right: 0;
+                align-self: flex-start;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 0.8s ease-out;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <a href="#" class="logo">
+                    <span class="logo-icon">🏝️</span>
+                    Jeju Travel
+                </a>
+                <nav>
+                    <ul id="nav-menu">
+                        <li><a href="#day1" class="active">1일차</a></li>
+                        <li><a href="#day2">2일차</a></li>
+                        <li><a href="#day3">3일차</a></li>
+                        <li><a href="#tips">여행팁</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-btn" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in-up">
+                <h1>제주도 <span class="accent">커플여행</span></h1>
+                <div class="dates">2025년 6월 29일 - 7월 1일</div>
+                <p>2박 3일 완벽한 제주 로맨틱 여행 플랜</p>
+                <div class="hero-buttons">
+                    <a href="#day1" class="btn-primary">여행 일정 보기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="day1" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Day 1 - 도착 & 제주시 탐방</h2>
+                <p class="section-subtitle">6월 29일 (일요일) - 공항 도착 후 제주시 중심으로 여행 시작</p>
+            </div>
+            
+            <div class="days-grid">
+                <div class="day-card animate-on-scroll">
+                    <div class="day-header">
+                        <h3>첫째 날</h3>
+                        <div class="date">June 29, 2025</div>
+                    </div>
+                    <div class="day-content">
+                        <div class="activity">
+                            <div class="activity-time">10:00</div>
+                            <div class="activity-details">
+                                <h4><span class="activity-icon">✈️</span>제주공항 도착 & 렌터카 픽업</h4>
+                                <p>공항에서 렌터카를 픽업하고 여행 준비를 완료합니다. 네비게이션 설정과 주유소 위치를 확인하세요.</p>
+                            </div>
+                        </div>
+
+                        <div class="activity">
+                            <div class="activity-time">11:30</div>
+                            <div class="activity-details">
+                                <h4><span class="activity-icon">🏨</span>숙소 체크인 & 짐 정리</h4>
+                                <p>제주시 시내 호텔에 체크인 후 간단히 짐을 정리하고 휴식을 취합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="restaurant-card">
+                            <div class="restaurant-header">
+                                <span class="restaurant-icon">🍽️</span>
+                                <span class="restaurant-name">점심 - 흑돼지 맛집 "돈사돈"</span>
+                            </div>
+                            <div class="restaurant-info">
+                                📍 제주시 연동<br>
+                                ⭐ 제주 대표 흑돼지 전문점<br>
+                                💰 1인당 약 15,000원
+                            </div>
+                        </div>
+
+                        <div class="activity">
+                            <div class="activity-time">14:30</div>
+                            <div class="activity-details">
+                                <h4><span class="activity-icon">🌊</span>용두암 관광</h4>
+                                <p>제주의 대표적인 관광지 용두암에서 사진 촬영과 산책을 즐깁니다. 주차장에서 도보 5분 거리입니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="activity">
+                            <div class="activity-time">16:00</div>
+                            <div class="activity-details">
+                                <h4><span class="activity-icon">☕</span>애월 한담해변 카페</h4>
+                                <p>아름다운 바다 전망과 함께 커피를 마시며 휴식. 인스타 감성 사진 촬영 포인트입니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="restaurant-card">
+                            <div class="restaurant-header">
+                                <span class="restaurant-icon">🍴</span>
+                                <span class="restaurant-name">저녁 - 해산물 "제주바다횟집"</span>
+                            </div>
+                            <div class="restaurant-info">
+                                📍 제주시 탑동<br>
+                                ⭐ 신선한 회와 해산물<br>
+                                💰 2인 기준 약 60,000원
+                            </div>
+                        </div>
+
+                        <div class="activity">
+                            <div class="activity-time">20:30</div>
+                            <div class="activity-details">
+                                <h4><span class="activity-icon">🌃</span>제주시 야경 투어</h4>
+                                <p>탑동 광장과 제주항 일대에서 야경을 감상하며 로맨틱한 산책을 즐깁니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="day2" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Day 2 - 남부 투어</h2>
+                <p class="section-subtitle">6월 30일 (월요일) - 중문, 서귀포 일대 관광</p>
+            </div>
+            
+            <div class="days-grid">
+                <div class="day-card animate-on-scroll">
+                    <div class="day-header" style="background: var(--gradient-sunset);">
+                        <h3>둘째 날</h3>
+                        <div class="date">June 30, 2025</div>
+                    </div>
+                    <div class="day-content">
+                        <div class="activity">
+                            <div class="activity-time">08:30</div>
+                            <div class="activity-details">
+                                <h4><span class="activity-icon">🌅</span>호텔 조식 & 체크아웃</h4>
+                                <p>여유롭게 조식을 즐기고 체크아웃 후 남부 투어를 시작합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="activity">
+                            <div class="activity-time">10:00</div>
+                            <div class="activity-details">
+                                <h4><span class="activity-icon">💦</span>천지연폭포</h4>
+                                <p>제주의 3대 폭포 중 하나인 천지연폭포에서 자연의 웅장함을 느껴보세요. 드라이브 약 1시간.</p>
+                            </div>
+                        </div>
+
+                        <div class="restaurant-card">
+                            <div class="restaurant-header">
+                                <span class="restaurant-icon">🍜</span>
+                                <span class="restaurant-name">점심 - "올레국수"</span>
+                            </div>
+                            <div class="restaurant-info">
+                                📍 서귀포시 중앙로<br>
+                                ⭐ 제주 향토 음식 전문점<br>
+                                💰 1인당 약 8,000원
+                            </div>
+                        </div>
+
+                        <div class="activity">
+                            <div class="activity-time">13:30</div>
+                            <div class="activity-details">
+                                <h4><span class="activity-icon">🏛️</span>정방폭포</h4>
+                                <p>바다로 직접 떨어지는 희귀한 폭포를 구경하고 주변 해안가를 산책합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="activity">
+                            <div class="activity-time">15:00</div>
+                            <div class="activity-details">
+                                <h4><span class="activity-icon">🌺</span>중문관광단지</h4>
+                                <p>중문해수욕장과 주변 리조트 지역을 둘러보며 여유로운 시간을 보냅니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="activity">
+                            <div class="activity-time">17:00</div>
+                            <div class="activity-details">
+                                <h4><span class="activity-icon">🏨</span>남부 리조트 체크인</h4>
+                                <p>서귀포/중문 지역 리조트에 체크인하고 휴식을 취합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="restaurant-card">
+                            <div class="restaurant-header">
+                                <span class="restaurant-icon">🥘</span>
+                                <span class="restaurant-name">저녁 - "해녀의집" 전복요리</span>
+                            </div>
+                            <div class="restaurant-info">
+                                📍 서귀포시 성산읍<br>
+                                ⭐ 싱싱한 전복과 해산물<br>
+                                💰 2인 기준 약 50,000원
+                            </div>
+                        </div>
+
+                        <div class="activity">
+                            <div class="activity-time">20:00</div>
+                            <div class="activity-details">
+                                <h4><span class="activity-icon">🌙</span>중문해변 야경</h4>
+                                <p>리조트 주변 해변에서 달빛 아래 로맨틱한 산책을 즐깁니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="day3" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Day 3 - 동부 투어 & 출발</h2>
+                <p class="section-subtitle">7월 1일 (화요일) - 성산일출봉과 마지막 여행</p>
+            </div>
+            
+            <div class="days-grid">
+                <div class="day-card animate-on-scroll">
+                    <div class="day-header" style="background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);">
+                        <h3>셋째 날</h3>
+                        <div class="date">July 1, 2025</div>
+                    </div>
+                    <div class="day-content">
+                        <div class="activity">
+                            <div class="activity-time">07:00</div>
+                            <div class="activity-details">
+                                <h4><span class="activity-icon">🌄</span>성산일출봉 일출</h4>
+                                <p>제주 여행의 하이라이트! 성산일출봉에서 아름다운 일출을 감상합니다. 이른 출발이 필요해요.</p>
+                            </div>
+                        </div>
+
+                        <div class="restaurant-card">
+                            <div class="restaurant-header">
+                                <span class="restaurant-icon">☕</span>
+                                <span class="restaurant-name">조식 - "성산포 아침밥집"</span>
+                            </div>
+                            <div class="restaurant-info">
+                                📍 서귀포시 성산읍<br>
+                                ⭐ 일출 후 따뜻한 국밥<br>
+                                💰 1인당 약 7,000원
+                            </div>
+                        </div>
+
+                        <div class="activity">
+                            <div class="activity-time">09:30</div>
+                            <div class="activity-details">
+                                <h4><span class="activity-icon">🐴</span>성산일출봉 등반</h4>
+                                <p>일출 감상 후 성산일출봉 정상까지 등반하며 360도 파노라마 뷰를 즐깁니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="activity">
+                            <div class="activity-time">11:30</div>
+                            <div class="activity-details">
+                                <h4><span class="activity-icon">🏖️</span>섭지코지 해안</h4>
+                                <p>드라마 촬영지로 유명한 섭지코지에서 마지막 제주 바다를 감상합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="restaurant-card">
+                            <div class="restaurant-header">
+                                <span class="restaurant-icon">🍱</span>
+                                <span class="restaurant-name">점심 - "제주공항 맛집거리"</span>
+                            </div>
+                            <div class="restaurant-info">
+                                📍 제주공항 근처<br>
+                                ⭐ 마지막 제주 음식<br>
+                                💰 1인당 약 12,000원
+                            </div>
+                        </div>
+
+                        <div class="activity">
+                            <div class="activity-time">14:00</div>
+                            <div class="activity-details">
+                                <h4><span class="activity-icon">🛍️</span>면세점 쇼핑</h4>
+                                <p>제주공항 면세점에서 마지막 쇼핑과 기념품 구매를 합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="activity">
+                            <div class="activity-time">15:30</div>
+                            <div class="activity-details">
+                                <h4><span class="activity-icon">🚗</span>렌터카 반납</h4>
+                                <p>렌터카를 반납하고 공항 체크인을 준비합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="activity">
+                            <div class="activity-time">17:00</div>
+                            <div class="activity-details">
+                                <h4><span class="activity-icon">✈️</span>제주공항 출발</h4>
+                                <p>즐거웠던 제주 여행을 마무리하고 서울로 출발합니다. 안전한 여행 되세요!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tips" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">여행 팁 & 준비사항</h2>
+                <p class="section-subtitle">제주 여행을 더욱 완벽하게 만들어줄 유용한 정보들</p>
+            </div>
+            
+            <div class="tips-grid">
+                <div class="tip-card animate-on-scroll">
+                    <div class="tip-icon">🚗</div>
+                    <h4>렌터카 팁</h4>
+                    <p>주유소 위치 미리 확인, 네비게이션 필수, 보험 가입 확인, 긁힘 사전 체크</p>
+                </div>
+                <div class="tip-card animate-on-scroll">
+                    <div class="tip-icon">🌦️</div>
+                    <h4>날씨 정보</h4>
+                    <p>6월 말 평균 기온 25-28°C, 간헐적 소나기 가능, 자외선 차단제 필수, 가벼운 우산 준비</p>
+                </div>
+                <div class="tip-card animate-on-scroll">
+                    <div class="tip-icon">💰</div>
+                    <h4>예산 가이드</h4>
+                    <p>2인 2박 3일 약 50-70만원 (숙박, 식비, 렌터카, 관광지 입장료 포함)</p>
+                </div>
+                <div class="tip-card animate-on-scroll">
+                    <div class="tip-icon">📱</div>
+                    <h4>필수 앱</h4>
+                    <p>카카오맵, 제주패스, 망고플레이트, 트립어드바이저, 날씨 앱</p>
+                </div>
+                <div class="tip-card animate-on-scroll">
+                    <div class="tip-icon">🎒</div>
+                    <h4>준비물</h4>
+                    <p>선크림, 선글라스, 편한 신발, 카메라, 보조배터리, 수영복, 얇은 겉옷</p>
+                </div>
+                <div class="tip-card animate-on-scroll">
+                    <div class="tip-icon">📍</div>
+                    <h4>주차 정보</h4>
+                    <p>관광지 대부분 무료 주차, 제주시내 유료 주차장 이용, 미리 주차장 위치 확인</p>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card animate-on-scroll">
+                    <div class="info-icon">🌡️</div>
+                    <h4>예상 날씨</h4>
+                    <p>맑음/구름 많음<br>최고 28°C / 최저 22°C</p>
+                </div>
+                <div class="info-card animate-on-scroll">
+                    <div class="info-icon">⛽</div>
+                    <h4>기름값</h4>
+                    <p>휘발유 리터당<br>약 1,600원</p>
+                </div>
+                <div class="info-card animate-on-scroll">
+                    <div class="info-icon">🅿️</div>
+                    <h4>주차료</h4>
+                    <p>관광지 대부분 무료<br>시내 시간당 1,000원</p>
+                </div>
+                <div class="info-card animate-on-scroll">
+                    <div class="info-icon">📞</div>
+                    <h4>응급연락처</h4>
+                    <p>119 (응급실)<br>제주관광공사 1330</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 제주도 커플 여행 플랜. 즐거운 여행 되세요! 💕</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('show');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"], .btn-primary[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Close mobile menu after clicking
+                const navMenu = document.getElementById('nav-menu');
+                navMenu.classList.remove('show');
+            });
+        });
+
+        // Header scroll effect
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 100) {
+                header.style.background = 'rgba(10, 10, 10, 0.98)';
+            } else {
+                header.style.background = 'rgba(10, 10, 10, 0.95)';
+            }
+        });
+
+        // Active navigation update
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
